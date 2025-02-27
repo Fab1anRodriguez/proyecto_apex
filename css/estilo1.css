@@ -1,0 +1,74 @@
+body {
+    background-image: url('../img/registro.jpeg');
+    /* Usa la imagen de fondo tipo panal */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.7);
+    /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    /* Ajuste de ancho */
+    color: white;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-container input {
+    width: 90%;
+    /* Se ajusta a un tamaño uniforme */
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ff4d4d;
+    /* Mantiene el color rojo */
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form-container button {
+    width: 95%;
+    /* Se ajusta al tamaño del formulario */
+    padding: 12px;
+    background: #ff4d4d;
+    /* Rojo fuerte */
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    /* Espacio entre los inputs y el botón */
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: #cc0000;
+    /* Oscurece el rojo al pasar el mouse */
+}
+
+.form-container a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
