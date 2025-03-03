@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2025 a las 17:27:20
+-- Tiempo de generación: 03-03-2025 a las 01:21:39
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -91,7 +91,8 @@ CREATE TABLE `estado` (
 --
 
 INSERT INTO `estado` (`id_estado`, `estado`) VALUES
-(1, 'Activo');
+(1, 'Activo'),
+(2, 'Inactivo');
 
 -- --------------------------------------------------------
 
@@ -158,6 +159,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id_rol`, `nom_rol`) VALUES
+(1, 'administrador'),
 (2, 'Usuario');
 
 -- --------------------------------------------------------
@@ -198,7 +200,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `email`, `avatar`, `vida`, `contraseña`, `id_Nivel`, `id_estado`, `id_rol`, `ultima_fecha`) VALUES
-(3, 'Jean-Arevalo3112', 'jeancarlosarevalorojas@gmail.com', NULL, 100, '$2y$10$NlXxbyyYliQ2LBanj7CJDeV.Vu3gWFl42n0yMb2T4cxVtp50Fbrd.', 1, 1, 2, NULL);
+(3, 'Jean-Arevalo3112', 'jeancarlosarevalorojas@gmail.com', NULL, 100, '$2y$10$NlXxbyyYliQ2LBanj7CJDeV.Vu3gWFl42n0yMb2T4cxVtp50Fbrd.', 1, 1, 2, NULL),
+(4, 'keyler_3112', 'keyler@gmail.com', NULL, 100, '$2y$10$FI1OnqKNdT1Hg0ydl1FogO3I6WXkQGGBD8fuBUaoTqSmIf60Nq7uG', 1, 1, 1, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -313,7 +316,7 @@ ALTER TABLE `estadisticas`
 -- AUTO_INCREMENT de la tabla `estado`
 --
 ALTER TABLE `estado`
-  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `jugadores_partida`
@@ -349,7 +352,7 @@ ALTER TABLE `salas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

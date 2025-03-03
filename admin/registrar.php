@@ -1,5 +1,5 @@
 <?php
-include '../conex/conexion.php'; // Conexión a la BD
+include '../conex/conexion.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = trim($_POST['nombre']);
@@ -54,11 +54,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="body">
     <div class="form-container">
         <h2>Registrarse</h2>
-        <form method="POST" action="">
+        <form method="POST" id="registerForm" action="">
             <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
+            <span class="error-message"></span>
+
             <input type="email" name="email" placeholder="Ingrese su correo" required>
+            <span class="error-message"></span>
+
             <input type="password" name="contraseña" placeholder="Ingrese su contraseña" required>
+            <span class="error-message"></span>
+
             <input type="password" name="repetir_contraseña" placeholder="Repetir contraseña" required>
+            <span class="error-message"></span>
+
             <button type="submit">Registrarse</button>
             <p><a href="../index.html">Iniciar sesión</a></p>
         </form>

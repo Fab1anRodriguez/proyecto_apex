@@ -20,11 +20,13 @@ body {
 }
 
 .avatars img {
-    width: 2000px;
-    height: 1000px;
-    margin: 80px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(245, 118, 67);
+    width: 100vw;  /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Envía la imagen al fondo */
 }
 
 .login-box {

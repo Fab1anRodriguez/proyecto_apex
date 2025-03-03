@@ -1,18 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iniciar juego</title>
+    <title>Iniciar Juego</title>
+    <link rel="stylesheet" href="../css/estilo2.css">
+
 </head>
 <body>
-    <img src="../img/juego.jpeg" width="100%"  height="100%">
 
-    <div class="boton">
-        <button type="submit" name="jugar">jugar</button>
-        <button type="submit" name="cambiar_avatar">cambiar_avatar</button>
-        <button type="submit" name="estadisticas">estadisticas</button>
+    <div class="game-container">
+        <h2>¡Prepárate para la batalla! 🎮</h2>
+        <img src="../img/juego.jpeg" alt="Imagen del Juego">
+
+        <div class="boton">
+            <button class="btn-jugar">Jugar</button>
+            <button class="btn-avatar">Cambiar Avatar</button>
+            <button class="btn-estadisticas">Estadísticas</button>
+            <button class="btn-cerrar" onclick="cerrarSesion()">Cerrar Sesión</button>
+        </div>
     </div>
-    <img src="../img/mundo.jpeg" width="10px" height="1px">
+
+    <script>
+        function cerrarSesion() {
+            window.location.href = 'logout.php'; 
+        }
+    </script>
+
+<script>
+        function EditarUsuario() {
+            window.location.href = 'admin_jugador.php'; 
+        }
+    </script>
+
 </body>
 </html>

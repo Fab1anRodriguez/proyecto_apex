@@ -1,13 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
+$host = "localhost";
+$usuario = "root";
 $password = "";
-$database = "free_fire"; // Asegúrate de que el nombre de la BD es correcto
+$base_datos = "free_fire";
 
-$conn = new mysqli($servername, $username, $password, $database);
+$conexion = new mysqli($host, $usuario, $password, $base_datos);
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+if ($conexion->connect_error) {
+    die("❌ Error de conexión: " . $conexion->connect_error);
 }
 ?>
